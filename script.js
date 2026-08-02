@@ -285,13 +285,12 @@ console.log("🔥 IronFit Gym Website Loaded Successfully");
 ========================================== */
 const faqItems = document.querySelectorAll(".faq-item");
 
-faqItems.item(0).classList.add("active"); // Pehla item by default open rahega
+faqItems.item(0).classList.add("active"); 
 
 faqItems.forEach(item => {
     const question = item.querySelector(".faq-question");
     question.addEventListener("click", () => {
-        // Agar dusra kholna hai toh baaki sab band karne ke liye yeh line laga sakte hain:
-        // faqItems.forEach(i => { if(i !== item) i.classList.remove("active"); });
+  
 
         item.classList.toggle("active");
     });
@@ -343,12 +342,11 @@ if (bmiBtn) {
    MODAL POPUP LOGIC
 ========================================== */
 const modal = document.getElementById("trialModal");
-const joinBtns = document.querySelectorAll(".btn, .btn2"); // Saare join buttons par trigger karega
+const joinBtns = document.querySelectorAll(".btn, .btn2"); 
 const closeBtn = document.querySelector(".close-modal");
 
 joinBtns.forEach(btn => {
     btn.addEventListener("click", (e) => {
-        // Agar link ya anchor tag (#) hai toh default behavior rok kar modal open karein
         if (btn.getAttribute("href") === "#" || btn.classList.contains("btn") || btn.classList.contains("btn2")) {
             e.preventDefault();
             if (modal) modal.classList.add("active");
